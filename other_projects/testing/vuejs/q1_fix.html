@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Page</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Sample Page</h1>
+    
+    <div id="app">
+        <button @click="count++">Count is: {{ count }}</button>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const count = ref(0);
+          return { count }; // Variables must be returned to be used in HTML
+        }
+      }).mount('#app');
+    </script>
+</body>
+</html>
